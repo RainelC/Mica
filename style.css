@@ -551,3 +551,13 @@ label {
     margin: 10px;
     margin-left: 50px;
 }
+
+#video_section_title{
+    position: relative;
+    top: 190px;
+    color: #163052;
+    margin-bottom: 25px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 37px;
+}
