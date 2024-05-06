@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/27e256b700.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.9/glider.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+    <header>
+        <!-- logo y el boton de buscar  -->
+        <div class="header_superior">
+            <div class="logo">
+                <img src="mica largo.png" alt="">
+            </div>
+            <div class="search">
+                <input type="search" placeholder="Busqueda...">
+                <button><i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- menu -->
+
+        <div class="container__menu">
+            <div class="menu">
+
+                <input type="checkbox" id="check__menu">
+                <label id="label__check" for="check__menu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">Nosotros</a>
+                            <ul>
+                                <li><a href="quienes_somos.html">Quienes Somos?</a></li>
+                                <li><a href="lideres.html">Lideres</a></li>
+                                <li><a href="loar.html">Loar</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="transmisiones.html">Transmisiones</a></li>
+                        <li><a href="#">Servicios</a>
+                            <ul>
+                                <li><a href="cdl.html">CDL</a></li>
+                                <li><a href="la_tabita.html">La tabita</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        <div>
+            <video controls src="./Video1.mp4" autoplay loop>
+                Video no soportado por el navegador
+            </video>
+        </div>
+
+
+
+    </header>
+
+    <body class="page-container">
+        <div class="container">
+            <h1>Subir Video</h1>
+            <label for="nombreUsuario">Ingresa tu nombre de usuario:</label>
+            <input type="text" id="nombreUsuario" required>
+            <button id="uploadButton">Subir Video</button>
+            <div id="uploadForm" style="display: none;">
+                <input type="file" name="videoFile" id="videoFile" accept="video/*" required>
+                <button id="submitVideo">Subir</button>
+            </div>
+            <div id="mensaje"></div>
+        </div>
+
+        <script>
+            document.getElementById("uploadButton").addEventListener("click", function () {
+                var nombreUsuario = document.getElementById("nombreUsuario").value;
+                var usuarioAutorizado = "nombre_de_usuario"; // Cambia "nombre_de_usuario" por el nombre de usuario autorizado
+
+                if (nombreUsuario === usuarioAutorizado) {
+                    document.getElementById("uploadForm").style.display = "block";
+                } else {
+                    document.getElementById("mensaje").innerText = "El nombre de usuario ingresado no está autorizado para acceder a esta página.";
+                }
+            });
+
+            document.getElementById("submitVideo").addEventListener("click", function () {
+                var videoFile = document.getElementById("videoFile").files[0];
+                if (videoFile) {
+                    // Aquí puedes agregar la lógica para cargar el video al servidor o realizar otras acciones necesarias
+                    alert("El video se ha subido exitosamente.");
+                } else {
+                    alert("Por favor selecciona un archivo de video.");
+                }
+            });
+        </script>
+
+
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+        </head>
+
+        <body>
