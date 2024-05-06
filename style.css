@@ -544,6 +544,7 @@ label {
     flex-wrap: wrap;
     justify-content: center;
     max-height: 500px;
+    margin-top: 200px;
 }
 
 .video{
